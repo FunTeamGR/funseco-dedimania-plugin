@@ -1,0 +1,43 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/dedimania-plugin",
+    "description": "Funseco Dedimania plugin — world records API client, dedimania-records widget",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Dedimania\\": "src/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "dedimania",
+            "name": "Dedimania",
+            "description": "Dedimania plugin — world records API client, dedimania-records widget",
+            "provider": "Funseco\\Dedimania\\DedimaniaServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "funseco/checkpoints-plugin": "@dev",
+        "funseco/records-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Dedimania\\Tests\\": "tests/"
+        }
+    }
+}
